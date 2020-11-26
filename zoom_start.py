@@ -12,9 +12,8 @@ def openlink(s):
 def look_and_run():
 	now = datetime.datetime.now()
 	week = now.isoweekday()
-	data.data.reverse()
-	for d in data.data:
-		print(d)
+	data.lectures.reverse()
+	for d in data.lectures:
 		if d[0] == week:
 			t1 = datetime.datetime.combine(now.today(), datetime.datetime.strptime(d[1], '%H:%M').time())
 			t2 = datetime.datetime.combine(now.today(), datetime.datetime.strptime(d[2], '%H:%M').time())
